@@ -1,7 +1,6 @@
 "use client";
 
 import { FaPlane, FaPlaneDeparture, FaPlaneArrival, FaPlaneCircleCheck } from "react-icons/fa6";
-import { useState } from "react";
 
 interface Partner {
   name: string;
@@ -43,12 +42,6 @@ const partners: Partner[] = [
 ];
 
 const Partners = () => {
-  const [hoveredPartner, setHoveredPartner] = useState<string | null>(null);
-
-  const handlePartnerHover = (partnerName: string | null) => {
-    setHoveredPartner(partnerName);
-  };
-
   return (
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -65,8 +58,6 @@ const Partners = () => {
             <div 
               key={index} 
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-              onMouseEnter={() => handlePartnerHover(partner.name)}
-              onMouseLeave={() => handlePartnerHover(null)}
               role="article"
               aria-label={`Information sur ${partner.name}`}
             >

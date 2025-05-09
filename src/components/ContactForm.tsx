@@ -23,7 +23,7 @@ const SUBJECTS = [
   { value: 'booking', label: 'Réservation' },
   { value: 'support', label: 'Support technique' },
   { value: 'partnership', label: 'Partenariat' },
-  { value: 'feedback', label: 'Retour d\'expérience' },
+  { value: 'feedback', label: 'Retour d&apos;expérience' },
   { value: 'complaint', label: 'Réclamation' },
   { value: 'other', label: 'Autre' },
 ];
@@ -74,9 +74,9 @@ const ContactForm = () => {
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = 'L\'email est requis';
+      newErrors.email = 'L&apos;email est requis';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Format d\'email invalide';
+      newErrors.email = 'Format d&apos;email invalide';
     }
     
     if (formData.phone && !/^(\+33|0)[1-9](\d{2}){4}$/.test(formData.phone)) {
@@ -126,7 +126,7 @@ const ContactForm = () => {
         company: '',
         country: 'FR',
       });
-    } catch (error) {
+    } catch {
       setStatus('error');
     } finally {
       setIsLoading(false);
@@ -320,7 +320,7 @@ const ContactForm = () => {
                   htmlFor="urgency"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Niveau d'urgence
+                  Niveau d&apos;urgence
                 </label>
                 <select
                   id="urgency"
@@ -328,7 +328,7 @@ const ContactForm = () => {
                   value={formData.urgency}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                  aria-label="Niveau d'urgence de votre demande"
+                  aria-label="Niveau d&apos;urgence de votre demande"
                 >
                   {URGENCY_LEVELS.map(level => (
                     <option key={level.value} value={level.value}>

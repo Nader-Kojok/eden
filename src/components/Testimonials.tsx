@@ -11,7 +11,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Amadou Diop',
     role: 'Pèlerin Hajj 2023',
-    text: 'Une expérience inoubliable grâce à Eden Travel. L\'organisation était parfaite et le service exceptionnel.',
+    text: 'Une expérience inoubliable grâce à Eden Travel. L&apos;organisation était parfaite et le service exceptionnel.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop'
   },
   {
@@ -50,7 +50,7 @@ const Testimonials = () => {
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-600 italic">"{testimonial.text}"</p>
+              <p className="text-gray-600 italic">&quot;{testimonial.text}&quot;</p>
             </div>
           ))}
         </div>
