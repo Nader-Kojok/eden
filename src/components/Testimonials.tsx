@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Amadou Diop',
     role: 'Pèlerin Hajj 2023',
-    text: 'Une expérience inoubliable grâce à Eden Travel. L\'organisation était parfaite et le service exceptionnel. Je recommande vivement leurs services pour le Hajj.',
+    text: 'Une expérience inoubliable grâce à Eden Tours & Travel. L\'organisation était parfaite et le service exceptionnel. Je recommande vivement leurs services pour le Hajj.',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop',
     location: 'Dakar, Sénégal',
     rating: 5
@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Fatou Ndiaye',
     role: 'Voyage Paris',
-    text: 'Je recommande vivement Eden Travel. Le personnel est très professionnel et les prix sont très compétitifs. Mon séjour à Paris était parfaitement organisé.',
+    text: 'Je recommande vivement Eden Tours & Travel. Le personnel est très professionnel et les prix sont très compétitifs. Mon séjour à Paris était parfaitement organisé.',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop',
     location: 'Saint-Louis, Sénégal',
     rating: 5
@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Moussa Diallo',
     role: 'Circuit Dubai',
-    text: 'Un voyage de rêve organisé par Eden Travel. Tout était parfaitement planifié et le service était impeccable. Je reviendrai certainement pour mes prochains voyages.',
+    text: 'Un voyage de rêve organisé par Eden Tours & Travel. Tout était parfaitement planifié et le service était impeccable. Je reviendrai certainement pour mes prochains voyages.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
     location: 'Touba, Sénégal',
     rating: 5

@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Eden Travel Agency",
+  title: "Eden Tours & Travel",
   description: "Votre partenaire de confiance pour les vols, circuits et pèlerinages dans le monde entier",
   keywords: "voyage, agence de voyage, pèlerinage, circuits, vols, tourisme",
-  authors: [{ name: "Eden Travel Agency" }],
+  authors: [{ name: "Eden Tours & Travel" }],
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#ffffff",
 };

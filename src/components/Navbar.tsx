@@ -61,7 +61,7 @@ const Navbar = () => {
               <div className="relative h-6 w-24 md:h-8 md:w-32">
                 <Image
                   src="/eden_logo.svg"
-                  alt="Eden Travel Logo"
+                  alt="Eden Tours & Travel Logo"
                   fill
                   sizes="(max-width: 640px) 6rem, 8rem"
                   className="object-contain object-left transition-transform hover:scale-105"

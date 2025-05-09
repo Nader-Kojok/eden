@@ -14,7 +14,7 @@ const faqItems: FAQItem[] = [
     answer: 'Les documents essentiels incluent un passeport valide, visa (selon la destination), billets d\'avion, réservation d\'hôtel, et assurance voyage. Pour le Hajj et l\'Omra, des documents supplémentaires sont requis.'
   },
   {
-    question: 'Comment réserver un voyage avec Eden Travel ?',
+    question: 'Comment réserver un voyage avec Eden Tours & Travel ?',
     answer: 'Vous pouvez réserver via notre site web, par téléphone, ou en visitant notre agence à Dakar. Nous acceptons les paiements en espèces, par virement bancaire, ou par carte de crédit.'
   },
   {

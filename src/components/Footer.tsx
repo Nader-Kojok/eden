@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Eden Travel</h3>
+            <h3 className="text-xl font-bold">Eden Tours & Travel</h3>
             <p className="text-orange-50">
               Votre partenaire de confiance pour tous vos besoins de voyage, des vols aux pèlerinages.
             </p>
@@ -117,7 +117,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 border-t border-white pt-8 text-center text-sm text-orange-50">
-          <p>© {new Date().getFullYear()} Eden Travel. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Eden Tours & Travel. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
