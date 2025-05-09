@@ -61,7 +61,7 @@ const Navbar = () => {
                 <span className="text-xl md:text-2xl font-extrabold text-blue-600 hover:text-blue-700 transition-colors duration-300">
                   Eden Tours
                 </span>
-                <span className="text-xl md:text-2xl font-extrabold text-orange-500 hover:text-orange-600 transition-colors duration-300 ml-1">
+                <span className="text-xl md:text-2xl font-extrabold text-[#EA8D1C] hover:text-[#EA8D1C]/90 transition-colors duration-300 ml-1">
                   & Travel
                 </span>
               </div>
