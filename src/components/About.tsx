@@ -23,7 +23,7 @@ const About = () => {
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
                 alt="Notre équipe de voyage" 
                 fill
-                className="object-cover"
+                className="object-cover rounded-2xl"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
