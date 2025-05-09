@@ -17,7 +17,7 @@ export default function Home() {
     <div className="w-full relative">
       <Hero />
       
-      <section className="section-padding gradient-bg">
+      <section className="section-padding">
         <div className="container-custom">
           <Services />
         </div>
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding gradient-bg">
+      <section className="section-padding">
         <div className="container-custom">
           <PopularDestinations />
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding gradient-bg">
+      <section className="section-padding">
         <div className="container-custom">
           <Promotions />
         </div>
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding gradient-bg">
+      <section className="section-padding">
         <div className="container-custom">
           <PaymentPlans />
         </div>
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding gradient-bg">
+      <section className="section-padding">
         <div className="container-custom">
           <Partners />
         </div>

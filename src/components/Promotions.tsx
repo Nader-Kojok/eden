@@ -1,60 +1,83 @@
+'use client';
+
 import Image from "next/image";
-import Link from "next/link";
 
 interface Promotion {
   title: string;
   description: string;
+  discount: string;
+  duration: string;
   image: string;
-  price: string;
 }
 
 const promotions: Promotion[] = [
   {
-    title: 'Hajj 2024',
-    description: 'Réservation anticipée avec 10% de réduction',
-    image: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=2070&auto=format&fit=crop',
-    price: 'À partir de 3 500 000 FCFA'
+    title: 'Dubai Shopping Festival',
+    description: 'Profitez de réductions exclusives sur les vols et hôtels pendant le festival',
+    discount: '-30%',
+    duration: 'Offre limitée',
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop'
   },
   {
-    title: 'Paris en Été',
-    description: 'Séjour 7 nuits avec petit-déjeuner inclus',
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop',
-    price: 'À partir de 850 000 FCFA'
+    title: 'Week-end à Paris',
+    description: 'Séjour romantique dans la ville lumière avec petit-déjeuner inclus',
+    discount: '-25%',
+    duration: 'Jusqu\'au 31/12',
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop'
   }
 ];
 
 const Promotions = () => {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Offres Spéciales</h2>
+    <section className="relative py-32 px-4">
+      <div className="max-w-7xl mx-auto relative">
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-4">
+            Offres Spéciales
+          </span>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Nos Meilleures Offres du Moment</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Profitez de nos promotions exclusives et réalisez vos rêves de voyage à des prix imbattables
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {promotions.map((promo, index) => (
-            <div key={index} className="relative group overflow-hidden rounded-xl">
-              <div className="relative h-[400px]">
-                <Image
-                  src={promo.image}
-                  alt={promo.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="text-3xl font-bold mb-2">{promo.title}</h3>
-                  <p className="text-xl mb-4">{promo.description}</p>
-                  <p className="text-2xl font-bold text-[#EA8D1C] group-hover:text-[#C88A3A] transition-colors">{promo.price}</p>
-                  <Link 
-                    href="/contact"
-                    className="inline-block mt-4 bg-white text-black px-6 py-2 rounded-md text-lg font-semibold hover:bg-[#EA8D1C] hover:text-white transition-all"
-                  >
-                    Réserver
-                  </Link>
+            <div 
+              key={index}
+              className="group relative overflow-hidden rounded-2xl aspect-[16/9]"
+            >
+              <Image 
+                src={promo.image} 
+                alt={promo.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-[#EA8D1C] rounded-full text-sm font-medium">
+                    {promo.discount}
+                  </span>
+                  <span className="px-3 py-1 bg-blue-600 rounded-full text-sm font-medium">
+                    {promo.duration}
+                  </span>
                 </div>
+                <h3 className="text-2xl font-bold mb-2">{promo.title}</h3>
+                <p className="text-sm opacity-90 mb-4">{promo.description}</p>
+                <button className="inline-flex items-center text-white font-medium hover:text-[#EA8D1C] transition-colors">
+                  Réserver maintenant
+                  <i className="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Bottom Divider */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-[#EA8D1C] to-blue-500" />
     </section>
   );
 };

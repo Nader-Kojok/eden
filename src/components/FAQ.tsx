@@ -1,3 +1,8 @@
+'use client';
+
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+
 interface FAQItem {
   question: string;
   answer: string;
@@ -39,29 +44,58 @@ const faqItems: FAQItem[] = [
 ];
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="py-24 px-4 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-20">Questions Fréquentes</h2>
-        <div className="space-y-6">
+    <section className="relative py-32 px-4">
+      <div className="max-w-7xl mx-auto relative">
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-4">
+            FAQ
+          </span>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Questions Fréquentes</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Trouvez rapidement des réponses à vos questions sur nos services et procédures
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-4">
           {faqItems.map((faq, index) => (
-            <details
+            <div 
               key={index}
-              className="group bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all"
+              className="bg-white rounded-2xl shadow-sm overflow-hidden"
             >
-              <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
-                <h3 className="text-xl font-semibold text-gray-800 group-hover:text-[#EA8D1C] transition-colors pr-4">
-                  {faq.question}
-                </h3>
-                <i className="fa-solid fa-chevron-down text-gray-500 group-hover:text-[#EA8D1C] transition-all group-open:rotate-180 flex-shrink-0"></i>
-              </summary>
-              <div className="px-8 pb-8">
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              <button
+                onClick={() => toggleAccordion(index)}
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                aria-expanded={openIndex === index}
+              >
+                <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                <ChevronDown 
+                  className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+                    openIndex === index ? 'transform rotate-180' : ''
+                  }`}
+                />
+              </button>
+              
+              <div 
+                className={`px-6 transition-all duration-200 ease-in-out ${
+                  openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
+                } overflow-hidden`}
+              >
+                <p className="text-gray-600">{faq.answer}</p>
               </div>
-            </details>
+            </div>
           ))}
         </div>
       </div>
+
+      {/* Bottom Divider */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-[#EA8D1C] to-blue-500" />
     </section>
   );
 };
