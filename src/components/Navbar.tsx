@@ -58,15 +58,13 @@ const Navbar = () => {
               className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
               aria-label="Retour à l'accueil"
             >
-              <div className="relative h-6 w-24 md:h-8 md:w-32">
-                <Image
-                  src="/eden_logo.svg"
-                  alt="Eden Tours & Travel Logo"
-                  fill
-                  sizes="(max-width: 640px) 6rem, 8rem"
-                  className="object-contain object-left transition-transform hover:scale-105"
-                  priority
-                />
+              <div className="flex items-center">
+                <span className="text-xl md:text-2xl font-extrabold text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                  Eden Tours
+                </span>
+                <span className="text-xl md:text-2xl font-extrabold text-orange-500 hover:text-orange-600 transition-colors duration-300 ml-1">
+                  & Travel
+                </span>
               </div>
             </Link>
           </div>
